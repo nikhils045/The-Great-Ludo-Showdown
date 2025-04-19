@@ -507,9 +507,9 @@ header p {
 .fixture-card li {
   background-color: transparent;
   border: none;
-  padding: 0.3rem 0; /* Reduced padding */
+  padding: 0.3rem 0;
   color: var(--light-text);
-  font-size: 1rem; /* Reduced font size */
+  font-size: 1rem;
   font-weight: 400;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -528,30 +528,29 @@ header p {
 }
 
 
-/* Style the scrollbar (Optional, for better visibility) */
 .slider-container::-webkit-scrollbar {
   height: 10px;
 }
 
 .slider-container::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.2); /* Darker track */
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
 .slider-container::-webkit-scrollbar-thumb {
-  background: var(--blue); /* Blue thumb */
+  background: var(--blue);
   border-radius: 10px;
   transition: background 0.3s ease;
 }
 
 .slider-container::-webkit-scrollbar-thumb:hover {
-  background: var(--yellow); /* Yellow on hover */
+  background: var(--yellow);
 }
 
 .slider-container {
   width: 100%;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  padding-bottom: 15px; /* Add some padding for the scrollbar */
+  overflow-x: auto;
+  padding-bottom: 15px;
   margin-bottom: 1rem;
 }
 
@@ -560,6 +559,25 @@ header p {
     text-align: center;
     margin-top: 1rem;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7); /* Subtle color */
-    animation: pulse 2s infinite; /* Use the existing pulse animation */
+    color: rgba(255, 255, 255, 0.7);
+    animation: pulse 2s infinite;
+}
+
+.day-date {
+  text-align: center;
+  font-size: 1.3rem; 
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--yellow);
+  font-weight: bold;
+   text-shadow: 0 0 3px rgba(244, 244, 244, 0.3); 
+}
+
+.start-time {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  color: var(--yellow);
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 217, 61, 0.4);
 }
