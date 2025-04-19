@@ -213,6 +213,12 @@ td {
   font-size: 0.95rem;
 }
 
+/* Highlight the top 16 rows with a darker, semi-transparent blue */
+tbody tr:nth-child(-n + 16) {
+  background-color: rgba(58, 190, 255, 0.2); /* Semi-transparent blue */
+}
+
+
 tr:hover {
   background-color: rgba(255, 255, 255, 0.08);
   transition: background-color 0.2s;
@@ -444,4 +450,4 @@ header p {
     opacity: 0.6;
     transform: scale(1);
   }
-}
+  }
