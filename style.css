@@ -11,13 +11,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    to right,
-    var(--red),
-    var(--yellow),
-    var(--green),
-    var(--blue)
-  );
+  background: linear-gradient(var(--red), var(--yellow), var(--green), var(--blue));
   background-size: 600% 600%;
   animation: gradientBG 20s ease infinite;
   color: var(--light-text);
@@ -127,15 +121,15 @@ li:hover {
   background-color: var(--green);
   color: white;
 }
-/* Make the iframe responsive */
+
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
-  margin: 2rem 0; /* Space around the video */
+  margin: 2rem 0;
 }
 
 .video-container iframe {
@@ -146,19 +140,19 @@ li:hover {
   height: 100%;
 }
 #home ul {
-  border-bottom: 2px solid var(--yellow); /* Yellow line */
+  border-bottom: 2px solid var(--yellow);
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
-/* Add gradient and animation to the text */
+
 .video-info {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
   background: linear-gradient(90deg, var(--red), var(--yellow), var(--blue));
-  -webkit-background-clip: text; /* Clip background to text */
-  background-clip: text; /* Clip background to text */
+  -webkit-background-clip: text;
+  background-clip: text;
   padding: 1rem;
   border-radius: 5px;
   margin-top: 2rem;
@@ -166,7 +160,6 @@ li:hover {
   animation: fadeIn 2s ease-out forwards;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -213,9 +206,8 @@ td {
   font-size: 0.95rem;
 }
 
-/* Highlight the top 16 rows with a darker, semi-transparent blue */
 tbody tr:nth-child(-n + 16) {
-  background-color: rgba(58, 190, 255, 0.2); /* Semi-transparent blue */
+  background-color: rgba(58, 190, 255, 0.2);
 }
 
 tr:hover {
@@ -368,7 +360,6 @@ header p {
   margin-top: 0.6rem;
 }
 
-/* Overall layout */
 .rules-container {
   display: flex;
   flex-direction: column;
@@ -376,7 +367,7 @@ header p {
   padding: 2rem;
   max-width: 900px;
   margin: 0 auto;
-  text-align: center; /* Center text globally */
+  text-align: center;
 }
 
 .rules-section {
@@ -453,7 +444,7 @@ header p {
 
 .day-heading {
   text-align: center;
-  font-size: 1.8rem; /* Reduced slightly */
+  font-size: 1.8rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--blue);
@@ -462,23 +453,21 @@ header p {
 
 .fixtures-slider {
   display: flex;
-  gap: 1rem; /* Reduced gap slightly */
+  gap: 1rem;
   padding: 0 1rem;
 }
 
 .fixture-card {
-  /* flex: 0 0 250px;  <- Remove or comment this line */
-  flex-basis: 85%; /* Make card width relative to container (approx screen width) */
-  max-width: 280px; /* Set a max-width for larger screens if needed */
+  flex-basis: 85%;
+  max-width: 280px;
   background-color: rgba(0, 0, 0, 0.6);
   border: 2px solid var(--blue);
   border-radius: 1rem;
-  padding: 1.2rem; /* Reduced padding slightly */
+  padding: 1.2rem;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
-  /* Add min-width to ensure they don't get too small on very small screens if flex-basis isn't enough */
-  min-width: 220px; /* Ensure a minimum readable width */
+  min-width: 220px;
 }
 
 .fixture-card:hover {
@@ -487,9 +476,9 @@ header p {
 
 .fixture-card h3 {
   color: var(--yellow);
-  font-size: 1.3rem; /* Reduced font size */
+  font-size: 1.3rem;
   margin-top: 0;
-  margin-bottom: 0.8rem; /* Adjusted margin */
+  margin-bottom: 0.8rem;
   text-align: center;
 }
 
@@ -571,4 +560,18 @@ header p {
   margin: 3rem auto;
   width: 80%;
   max-width: 600px;
+}
+
+/* Style for eliminated players */
+tbody tr.eliminated {
+  background-color: grey;
+  opacity: 0.9;
+}
+
+tbody tr.eliminated td {
+  color: var(--light-text);
+}
+
+tbody tr.eliminated:hover {
+  opacity: 1;
 }
