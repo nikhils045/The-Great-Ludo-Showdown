@@ -218,7 +218,6 @@ tbody tr:nth-child(-n + 16) {
   background-color: rgba(58, 190, 255, 0.2); /* Semi-transparent blue */
 }
 
-
 tr:hover {
   background-color: rgba(255, 255, 255, 0.08);
   transition: background-color 0.2s;
@@ -450,9 +449,7 @@ header p {
     opacity: 0.6;
     transform: scale(1);
   }
-  }
-
-
+}
 
 .day-heading {
   text-align: center;
@@ -462,7 +459,6 @@ header p {
   color: var(--blue);
   text-shadow: 0 0 8px rgba(58, 190, 255, 0.5);
 }
-
 
 .fixtures-slider {
   display: flex;
@@ -486,9 +482,8 @@ header p {
 }
 
 .fixture-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
-
 
 .fixture-card h3 {
   color: var(--yellow);
@@ -517,16 +512,15 @@ header p {
 }
 
 .fixture-card li:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .fixture-card li:hover {
-    transform: none;
-    background-color: transparent;
-    color: var(--light-text);
+  transform: none;
+  background-color: transparent;
+  color: var(--light-text);
 }
-
 
 .slider-container::-webkit-scrollbar {
   height: 10px;
@@ -554,30 +548,27 @@ header p {
   margin-bottom: 1rem;
 }
 
-
 .scroll-hint {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    animation: pulse 2s infinite;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  animation: pulse 2s infinite;
 }
 
 .day-date {
   text-align: center;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   margin-top: -0.5rem;
   margin-bottom: 1.5rem;
   color: var(--yellow);
   font-weight: bold;
-   text-shadow: 0 0 3px rgba(244, 244, 244, 0.3); 
+  text-shadow: 0 0 3px rgba(244, 244, 244, 0.3);
 }
 
-.start-time {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-top: 2rem;
-  color: var(--yellow);
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(255, 217, 61, 0.4);
+.section-separator {
+  border-bottom: 2px solid var(--yellow);
+  margin: 3rem auto;
+  width: 80%;
+  max-width: 600px;
 }
