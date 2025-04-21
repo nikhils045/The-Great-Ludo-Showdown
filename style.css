@@ -570,7 +570,7 @@ header p {
 
 /* Style for eliminated players */
 tbody tr.eliminated {
-  background-color: grey;
+  background-color: #ff6666;
   opacity: 0.9;
 }
 
