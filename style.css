@@ -12,12 +12,12 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(
-     to right,
-     var(--red),
-     var(--yellow),
-     var(--green),
-     var(--blue)
-   );
+    to right,
+    var(--red),
+    var(--yellow),
+    var(--green),
+    var(--blue)
+  );
   background-size: 600% 600%;
   animation: gradientBG 20s ease infinite;
   color: var(--light-text);
@@ -213,12 +213,21 @@ td {
 }
 
 tbody tr:nth-child(-n + 16) {
-  background-color: rgba(58, 190, 255, 0.2);
+  background: linear-gradient(to right, #458145, #2b768f);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
 }
 
-tr:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  transition: background-color 0.2s;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header h1 {
@@ -580,4 +589,11 @@ tbody tr.eliminated td {
 
 tbody tr.eliminated:hover {
   opacity: 1;
+}
+
+.content h5 {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
 }
