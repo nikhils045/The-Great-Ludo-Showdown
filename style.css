@@ -70,6 +70,17 @@ header img {
   animation: logoFadeIn 2s ease-in-out;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -152,31 +163,30 @@ li:hover {
   margin-bottom: 2rem;
 }
 
-.video-info {
+.event-dates {
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(90deg, var(--red), var(--yellow), var(--blue));
-  -webkit-background-clip: text;
-  background-clip: text;
+  margin: 1.5rem 0;
   padding: 1rem;
-  border-radius: 5px;
-  margin-top: 2rem;
-  text-shadow: 0 0 10px var(--yellow), 0 0 20px var(--yellow), 0 0 30px var(--yellow); /* Glowing text effect */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   animation: fadeIn 2s ease-out forwards;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+.event-dates p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--yellow);
+  text-shadow: 0 0 8px rgba(255, 217, 61, 0.5);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .event-dates p {
+    font-size: 1.2rem;
   }
 }
+
 .table-wrapper {
   overflow-x: auto;
   margin-top: 1rem;
@@ -185,13 +195,14 @@ li:hover {
   padding: 1rem;
   width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 700px;
   table-layout: auto;
+  max-width: 100%;
 }
 
 thead {
@@ -232,6 +243,42 @@ tbody tr:nth-child(-n + 16) {
   100% {
     background-position: 0% 50%;
   }
+}
+
+@media (max-width: 400px) {
+  .content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  th,
+  td {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Style for eliminated players */
+tbody tr.eliminated {
+  background-color: rgb(190, 63, 63);
+  opacity: 0.9;
+}
+
+tbody tr.eliminated td {
+  color: var(--light-text);
+}
+
+tbody tr.eliminated:hover {
+  opacity: 1;
+}
+
+.content h5 {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 header h1 {
@@ -583,27 +630,6 @@ header p {
   max-width: 600px;
 }
 
-/* Style for eliminated players */
-tbody tr.eliminated {
-  background-color: rgb(190, 63, 63);
-  opacity: 0.9;
-}
-
-tbody tr.eliminated td {
-  color: var(--light-text);
-}
-
-tbody tr.eliminated:hover {
-  opacity: 1;
-}
-
-.content h5 {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  margin: 0.5rem 0;
-}
-
 .card-container {
   display: flex;
   flex-direction: column;
@@ -741,5 +767,28 @@ tbody tr.eliminated:hover {
   }
   .final-card {
     padding: 0.8rem;
+  }
+}
+
+.winner-runnerup {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.winner-runnerup .highlight-image {
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 600px) {
+  .winner-runnerup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .winner-runnerup .highlight-image {
+    max-width: 300px;
   }
 }
